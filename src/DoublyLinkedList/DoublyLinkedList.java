@@ -136,4 +136,35 @@ public class DoublyLinkedList {
             currentNode = currentNode.nextNode;
         }
     }
+
+    public int getValue(int index){
+        if(index == 0){
+            return head.value;
+        }
+
+        if(index == size - 1){
+            return tail.value;
+        }
+
+        if(index < 0 || index >= size){
+            throw new IndexOutOfBoundsException();
+        }
+
+        Node currentNode = head;
+        if(index < size/2) {
+            for (int i = 0; i < index - 1; i++) {
+                currentNode = currentNode.nextNode;
+            }
+        } else {
+            currentNode = tail;
+            for (int i = size - 1; i > index - 1; i--) {
+                currentNode = currentNode.previousNode;
+            }
+        }
+        return currentNode.value;
+    }
+
+    public int getSize(){
+        return size;
+    }
 }

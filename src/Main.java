@@ -23,7 +23,7 @@ public class Main {
         list.addTail(18);
         list.print();
         System.out.println("______________________________________________");
-        list.reverse();
         list.print();
+        System.out.println("Value: " + list.getValue(0));
     }
 }
