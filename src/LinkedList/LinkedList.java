@@ -151,6 +151,10 @@ public class LinkedList {
         tail = headNode;
     }
 
+    public int getSize(){
+        return size;
+    }
+
     public void print(){//O(n)
         Node currentNode = head;
 
